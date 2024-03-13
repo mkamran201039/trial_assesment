@@ -16,7 +16,7 @@ struct Result {
 
 
 
-// Define the Monitor struct to represent each monitor object
+
 #[derive(Debug, Deserialize)]
 #[allow(dead_code)]
 struct Monitor {
