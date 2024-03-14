@@ -35,6 +35,8 @@ struct Monitor {
     #[serde(default)] // Use default value if field is missing in JSON
     result: Option<Result>,
     code: String,
+    #[serde(rename = "type")] // Rename field to "type" in JSON
+    monitor_type: Option<String>,    // Use different name in Rust to avoid conflict with keyword
 }
 
 impl Monitor {
@@ -47,6 +49,7 @@ impl Monitor {
             script: None,
             result: Some(Result::new()),
             code: String::from("random_code"),
+            monitor_type: Some(String::from("none")),
         }
     }
 }
